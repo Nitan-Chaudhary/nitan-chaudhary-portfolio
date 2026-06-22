@@ -348,8 +348,8 @@ function Hero() {
               <img
                 src={heroImg}
                 alt="Nitan Chaudhary"
-                width={1024}
-                height={1024}
+                width={900}
+                height={900}
                 className="h-full w-full object-cover"
               />
             </div>
