@@ -699,9 +699,10 @@ function Resume() {
           <Button
             size="lg"
             className="rounded-full bg-gradient-brand text-primary-foreground hover:opacity-90 glow-shadow"
-          ><a href={resume} download="Nitan-Chaudhary.pdf">
+          >
+            <a href={resume} download="Nitan-Chaudhary.pdf">
             <Download className="mr-2 h-4 w-4" /> Download CV
-          </a>
+            </a>
           </Button>
         </div>
       </div>
@@ -740,12 +741,8 @@ function Contact() {
             ))}
           </div>
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-              setTimeout(() => setSent(false), 3000);
-              (e.target as HTMLFormElement).reset();
-            }}
+             action="https://formsubmit.co/chaudharynitan4@gmail.com"
+             method="POST"
             className="reveal glass rounded-3xl p-7 card-shadow space-y-4"
           >
             <div className="grid sm:grid-cols-2 gap-4">
@@ -783,8 +780,8 @@ function Footer() {
         <div className="flex items-center gap-3">
           {[
             { I: Github, href: "https://github.com/Nitan-Chaudhary", label: "GitHub" },
-            { I: Linkedin, href: "#", label: "LinkedIn" },
-            { I: Mail, href: "mailto:nitan@example.com", label: "Email" },
+            { I: Linkedin, href: "https://www.linkedin.com/in/nitan-chaudhary-b2206a271/", label: "LinkedIn" },
+            { I: Mail, href: "mailto:chaudharynitan4@gmail.com", label: "Email" },
           ].map(({ I, href, label }) => (
             <a
               key={label}
