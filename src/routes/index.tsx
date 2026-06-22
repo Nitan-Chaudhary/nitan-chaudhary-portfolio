@@ -148,6 +148,7 @@ const STATS = [
 ];
 
 function Index() {
+  useScrollReveal();
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Nav />
@@ -165,6 +166,25 @@ function Index() {
       <ScrollTop />
     </div>
   );
+}
+
+function useScrollReveal() {
+  useEffect(() => {
+    const els = document.querySelectorAll<HTMLElement>(".reveal");
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
 }
 
 function Nav() {
@@ -362,7 +382,7 @@ function Counter({ value, suffix, label }: { value: number; suffix: string; labe
 
 function SectionHeader({ tag, title, sub }: { tag: string; title: string; sub?: string }) {
   return (
-    <div className="text-center max-w-2xl mx-auto mb-14">
+    <div className="reveal text-center max-w-2xl mx-auto mb-14">
       <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs text-muted-foreground mb-4">
         <span className="h-1.5 w-1.5 rounded-full bg-accent" />
         {tag}
@@ -381,7 +401,7 @@ function About() {
       <div className="mx-auto max-w-6xl px-4">
         <SectionHeader tag="About Me" title="Turning data into decisions" />
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="glass rounded-3xl p-7 md:col-span-2">
+          <div className="reveal glass rounded-3xl p-7 md:col-span-2">
             <h3 className="text-xl font-semibold mb-3">Professional Summary</h3>
             <p className="text-muted-foreground leading-relaxed">
               I'm an aspiring Data Scientist with hands-on
@@ -403,8 +423,12 @@ function About() {
               { icon: BarChart3, label: "Analytics & BI" },
               { icon: Code2, label: "Python • SQL" },
               { icon: Globe, label: "Streamlit • Web" },
-            ].map((c) => (
-              <div key={c.label} className="glass rounded-2xl p-4 flex items-center gap-3">
+            ].map((c, i) => (
+              <div
+                key={c.label}
+                className="reveal glass rounded-2xl p-4 flex items-center gap-3"
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
                 <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-brand text-primary-foreground">
                   <c.icon className="h-5 w-5" />
                 </span>
@@ -424,8 +448,12 @@ function Skills() {
       <div className="mx-auto max-w-6xl px-4">
         <SectionHeader tag="Skills" title="Toolbox & expertise" />
         <div className="grid md:grid-cols-2 gap-6">
-          {SKILL_GROUPS.map((g) => (
-            <div key={g.title} className="glass rounded-3xl p-7 card-shadow hover:-translate-y-1 transition">
+          {SKILL_GROUPS.map((g, i) => (
+            <div
+              key={g.title}
+              className="reveal glass rounded-3xl p-7 card-shadow hover:-translate-y-1 transition"
+              style={{ transitionDelay: `${i * 100}ms` }}
+            >
               <div className="flex items-center gap-3 mb-5">
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-brand text-primary-foreground">
                   <g.icon className="h-5 w-5" />
@@ -480,10 +508,11 @@ function Projects() {
           ))}
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {list.map((p) => (
+          {list.map((p, i) => (
             <article
               key={p.title}
-              className="group glass rounded-3xl overflow-hidden card-shadow hover:-translate-y-1 transition"
+              className="reveal group glass rounded-3xl overflow-hidden card-shadow hover:-translate-y-1 transition"
+              style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -535,10 +564,11 @@ function Certifications() {
       <div className="mx-auto max-w-6xl px-4">
         <SectionHeader tag="Certifications" title="Continuous learning" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {CERTIFICATIONS.map((c) => (
+          {CERTIFICATIONS.map((c, i) => (
             <div
               key={c.title}
-              className="glass rounded-3xl p-6 card-shadow hover:-translate-y-1 transition"
+              className="reveal glass rounded-3xl p-6 card-shadow hover:-translate-y-1 transition"
+              style={{ transitionDelay: `${i * 80}ms` }}
             >
               <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-brand text-primary-foreground mb-4">
                 <Award className="h-6 w-6" />
@@ -564,9 +594,10 @@ function Education() {
             {EDUCATION.map((e, i) => (
               <div
                 key={e.title}
-                className={`relative md:grid md:grid-cols-2 md:gap-10 ${
+                className={`reveal relative md:grid md:grid-cols-2 md:gap-10 ${
                   i % 2 === 0 ? "" : "md:[direction:rtl]"
                 }`}
+                style={{ transitionDelay: `${i * 120}ms` }}
               >
                 <div
                   className={`pl-12 md:pl-0 ${
@@ -600,7 +631,7 @@ function Resume() {
   return (
     <section id="resume" className="py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-4">
-        <div className="glass rounded-3xl p-8 md:p-12 card-shadow flex flex-col md:flex-row items-center gap-8">
+        <div className="reveal glass rounded-3xl p-8 md:p-12 card-shadow flex flex-col md:flex-row items-center gap-8">
           <div className="grid h-24 w-24 place-items-center rounded-3xl bg-gradient-brand text-primary-foreground glow-shadow">
             <FileText className="h-10 w-10" />
           </div>
@@ -640,7 +671,7 @@ function Contact() {
               <a
                 key={c.label}
                 href={c.href ?? "#"}
-                className="glass rounded-2xl p-5 flex items-center gap-4 hover:-translate-y-0.5 transition block"
+                className="reveal glass rounded-2xl p-5 flex items-center gap-4 hover:-translate-y-0.5 transition block"
               >
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-brand text-primary-foreground">
                   <c.icon className="h-5 w-5" />
@@ -659,7 +690,7 @@ function Contact() {
               setTimeout(() => setSent(false), 3000);
               (e.target as HTMLFormElement).reset();
             }}
-            className="glass rounded-3xl p-7 card-shadow space-y-4"
+            className="reveal glass rounded-3xl p-7 card-shadow space-y-4"
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <Input placeholder="Your name" required className="bg-secondary/40 border-border" />
