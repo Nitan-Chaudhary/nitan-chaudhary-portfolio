@@ -29,17 +29,17 @@ import projectCoffee from "@/assets/project-coffee.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nitan Chaudhary — Data Scientist & AI/ML Engineer" },
+      { title: "Nitan Chaudhary — Data Scientist" },
       {
         name: "description",
         content:
-          "Portfolio of Nitan Chaudhary — Data Scientist, Data Analyst & AI/ML Engineer transforming data into actionable insights.",
+          "Portfolio of Nitan Chaudhary — Data Scientist and Data Analyst transforming data into actionable insights.",
       },
-      { property: "og:title", content: "Nitan Chaudhary — Data Scientist & AI/ML Engineer" },
+      { property: "og:title", content: "Nitan Chaudhary — Data Scientist" },
       {
         property: "og:description",
         content:
-          "Portfolio showcasing machine learning, data analytics & AI projects by Nitan Chaudhary.",
+          "Portfolio showcasing machine learning and data analytics projects by Nitan Chaudhary.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -64,7 +64,6 @@ const SKILL_GROUPS = [
     skills: [
       { name: "Python", level: 92 },
       { name: "SQL", level: 88 },
-      { name: "Java", level: 70 },
     ],
   },
   {
@@ -82,9 +81,8 @@ const SKILL_GROUPS = [
     title: "Visualization",
     skills: [
       { name: "Power BI", level: 88 },
-      { name: "Tableau", level: 78 },
       { name: "Excel", level: 90 },
-      { name: "Matplotlib / Seaborn / Plotly", level: 85 },
+      { name: "Matplotlib / Seaborn", level: 85 },
     ],
   },
   {
@@ -121,7 +119,7 @@ const PROJECTS = [
   },
   {
     title: "Coffee Shop Sales Dashboard",
-    category: "Business Intelligence",
+    category: "Data Analysis",
     image: projectCoffee,
     description:
       "Interactive BI dashboard surfacing revenue, product mix, and store performance to drive operational decisions.",
@@ -133,26 +131,26 @@ const PROJECTS = [
 
 const CERTIFICATIONS = [
   { title: "Data Analytics Master Class", org: "Novitech R&D Pvt. Ltd." },
-  { title: "Data Science Training", org: "Professional Program" },
+  { title: "Data Science Training", org: "Sensation Software Solutions Pvt. Ltd." },
   { title: "Python Training", org: "Skysys Engineering" },
-  { title: "Frontend Development Training", org: "Web Technologies Program" },
+  { title: "Frontend Development Training", org: "Apptechies" },
 ];
 
 const EDUCATION = [
   {
-    year: "2021 — 2024",
-    title: "Bachelor of Science (B.Sc)",
+    year: "2023 — 2026",
+    title: "Bachelor of Computer Science & Engineering (B.Tech)",
     org: "University Degree",
     detail: "Foundation in mathematics, statistics, and computer science.",
   },
   {
-    year: "2023",
+    year: "2025",
     title: "Data Analytics Master Class",
     org: "Novitech R&D Pvt. Ltd.",
     detail: "Advanced training in analytics workflows, SQL, and BI tools.",
   },
   {
-    year: "2022",
+    year: "2024",
     title: "Python Training",
     org: "Skysys Engineering",
     detail: "Core Python, libraries, and applied scripting.",
@@ -288,12 +286,11 @@ function Hero() {
             Hi, I'm <span className="text-gradient">Nitan Chaudhary</span>
           </h1>
           <p className="mt-4 text-lg md:text-xl text-muted-foreground">
-            Data Scientist <span className="text-accent">|</span> Data Analyst{" "}
-            <span className="text-accent">|</span> AI/ML Engineer
+            Data Scientist <span className="text-accent">|</span> Data Analyst
           </p>
           <p className="mt-6 max-w-xl text-muted-foreground leading-relaxed">
             Passionate about transforming data into meaningful insights through
-            Machine Learning, Data Analytics, and Artificial Intelligence.
+            Machine Learning, Data Analytics.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button
@@ -404,7 +401,7 @@ function About() {
           <div className="glass rounded-3xl p-7 md:col-span-2">
             <h3 className="text-xl font-semibold mb-3">Professional Summary</h3>
             <p className="text-muted-foreground leading-relaxed">
-              I'm an aspiring Data Scientist & AI/ML Engineer with hands-on
+              I'm an aspiring Data Scientist with hands-on
               experience in Python, SQL, and modern data tooling. I design
               end-to-end analytical workflows — from collection and cleaning to
               modeling and storytelling with Power BI and Tableau. I love
@@ -419,9 +416,9 @@ function About() {
           </div>
           <div className="space-y-4">
             {[
-              { icon: Brain, label: "Machine Learning & AI" },
+              { icon: Brain, label: "Machine Learning" },
               { icon: BarChart3, label: "Analytics & BI" },
-              { icon: Code2, label: "Python • SQL • Java" },
+              { icon: Code2, label: "Python • SQL" },
               { icon: Globe, label: "Streamlit • Web" },
             ].map((c) => (
               <div key={c.label} className="glass rounded-2xl p-4 flex items-center gap-3">
