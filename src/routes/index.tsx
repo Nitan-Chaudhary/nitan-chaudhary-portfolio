@@ -25,6 +25,7 @@ import heroImg from "@/assets/nitan-hero.jpg";
 import projectAqi from "@/assets/project-aqi.jpg";
 import projectSalary from "@/assets/project-salary.jpg";
 import projectCoffee from "@/assets/project-coffee.jpg";
+import resume from "@/assets/Nitan-Chaudhary.pdf";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -301,7 +302,7 @@ function Hero() {
               className="rounded-full bg-gradient-brand text-primary-foreground hover:opacity-90 glow-shadow"
               asChild
             >
-              <a href="#resume">
+              <a href={resume} download="Nitan-Chaudhary.pdf">
                 <Download className="mr-2 h-4 w-4" /> Download Resume
               </a>
             </Button>
