@@ -286,7 +286,7 @@ function Hero() {
             Available for opportunities
           </div>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Hi, I'm <span className="text-gradient">Nitan Chaudhary</span>
+            Hi, I'm <Typewriter text="Nitan Chaudhary" className="text-gradient" />
           </h1>
           <p className="mt-4 text-lg md:text-xl text-muted-foreground">
             Data Scientist <span className="text-accent">|</span> Data Analyst
@@ -352,6 +352,47 @@ function Hero() {
         </div>
       </div>
     </section>
+  );
+}
+
+function Typewriter({
+  text,
+  className = "",
+  speed = 90,
+  pause = 1400,
+}: {
+  text: string;
+  className?: string;
+  speed?: number;
+  pause?: number;
+}) {
+  const [shown, setShown] = useState("");
+  const [deleting, setDeleting] = useState(false);
+  useEffect(() => {
+    const delay = deleting ? speed / 2 : shown === text ? pause : speed;
+    const id = setTimeout(() => {
+      if (!deleting && shown === text) {
+        setDeleting(true);
+        return;
+      }
+      if (deleting && shown === "") {
+        setDeleting(false);
+        return;
+      }
+      setShown(
+        deleting ? text.slice(0, shown.length - 1) : text.slice(0, shown.length + 1)
+      );
+    }, delay);
+    return () => clearTimeout(id);
+  }, [shown, deleting, text, speed, pause]);
+  return (
+    <span className={className}>
+      {shown}
+      <span
+        aria-hidden
+        className="inline-block w-[2px] h-[0.9em] align-[-0.1em] ml-1 bg-accent animate-pulse"
+      />
+    </span>
   );
 }
 
