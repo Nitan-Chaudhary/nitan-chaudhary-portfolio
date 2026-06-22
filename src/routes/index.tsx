@@ -117,16 +117,6 @@ const PROJECTS = [
     features: ["EDA", "Trend Analysis", "Insights Report"],
     link: "#",
   },
-  {
-    title: "Coffee Shop Sales Dashboard",
-    category: "Data Analysis",
-    image: projectCoffee,
-    description:
-      "Interactive BI dashboard surfacing revenue, product mix, and store performance to drive operational decisions.",
-    tech: ["Excel", "Power BI"],
-    features: ["KPI Tracking", "Drill-down Reports", "Forecasting"],
-    link: "#",
-  },
 ];
 
 const CERTIFICATIONS = [
