@@ -631,7 +631,7 @@ function Resume() {
   return (
     <section id="resume" className="py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-4">
-        <div className="glass rounded-3xl p-8 md:p-12 card-shadow flex flex-col md:flex-row items-center gap-8">
+        <div className="reveal glass rounded-3xl p-8 md:p-12 card-shadow flex flex-col md:flex-row items-center gap-8">
           <div className="grid h-24 w-24 place-items-center rounded-3xl bg-gradient-brand text-primary-foreground glow-shadow">
             <FileText className="h-10 w-10" />
           </div>
@@ -671,7 +671,7 @@ function Contact() {
               <a
                 key={c.label}
                 href={c.href ?? "#"}
-                className="glass rounded-2xl p-5 flex items-center gap-4 hover:-translate-y-0.5 transition block"
+                className="reveal glass rounded-2xl p-5 flex items-center gap-4 hover:-translate-y-0.5 transition block"
               >
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-brand text-primary-foreground">
                   <c.icon className="h-5 w-5" />
