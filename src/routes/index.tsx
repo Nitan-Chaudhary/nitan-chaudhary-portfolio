@@ -356,6 +356,51 @@ function Hero() {
 }
 
 function Counter({ value, suffix, label }: { value: number; suffix: string; label: string }) {
+  return _Counter({ value, suffix, label });
+}
+
+function Typewriter({
+  text,
+  className = "",
+  speed = 90,
+  pause = 1400,
+}: {
+  text: string;
+  className?: string;
+  speed?: number;
+  pause?: number;
+}) {
+  const [shown, setShown] = useState("");
+  const [deleting, setDeleting] = useState(false);
+  useEffect(() => {
+    const delay = deleting ? speed / 2 : shown === text ? pause : speed;
+    const id = setTimeout(() => {
+      if (!deleting && shown === text) {
+        setDeleting(true);
+        return;
+      }
+      if (deleting && shown === "") {
+        setDeleting(false);
+        return;
+      }
+      setShown(
+        deleting ? text.slice(0, shown.length - 1) : text.slice(0, shown.length + 1)
+      );
+    }, delay);
+    return () => clearTimeout(id);
+  }, [shown, deleting, text, speed, pause]);
+  return (
+    <span className={className}>
+      {shown}
+      <span
+        aria-hidden
+        className="inline-block w-[2px] h-[0.9em] align-[-0.1em] ml-1 bg-accent animate-pulse"
+      />
+    </span>
+  );
+}
+
+function _Counter({ value, suffix, label }: { value: number; suffix: string; label: string }) {
   const [n, setN] = useState(0);
   useEffect(() => {
     let raf: number;
