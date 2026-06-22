@@ -315,6 +315,20 @@ function Hero() {
                 <Mail className="mr-2 h-4 w-4" /> Contact Me
               </a>
             </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-full border-border hover:bg-secondary"
+              asChild
+            >
+              <a
+                href="https://github.com/Nitan-Chaudhary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="mr-2 h-4 w-4" /> GitHub
+              </a>
+            </Button>
           </div>
 
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
