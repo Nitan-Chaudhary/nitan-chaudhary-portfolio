@@ -63,7 +63,7 @@ const SKILL_GROUPS = [
     title: "Programming",
     skills: [
       { name: "Python", level: 92 },
-      { name: "SQL", level: 88 },
+      { name: "SQL", level: 80 },
     ],
   },
   {
@@ -71,16 +71,16 @@ const SKILL_GROUPS = [
     title: "Data Science",
     skills: [
       { name: "Pandas / NumPy", level: 90 },
-      { name: "Scikit-Learn", level: 85 },
-      { name: "Machine Learning", level: 82 },
+      { name: "Scikit-Learn", level: 80 },
+      { name: "Machine Learning", level: 80 },
     ],
   },
   {
     icon: BarChart3,
     title: "Visualization",
     skills: [
-      { name: "Power BI", level: 88 },
-      { name: "Excel", level: 90 },
+      { name: "Power BI", level: 70 },
+      { name: "Excel", level: 80 },
       { name: "Matplotlib / Seaborn", level: 85 },
     ],
   },
@@ -90,7 +90,7 @@ const SKILL_GROUPS = [
     skills: [
       { name: "HTML", level: 85 },
       { name: "CSS", level: 80 },
-      { name: "Streamlit", level: 88 },
+      { name: "Streamlit", level: 80 },
     ],
   },
 ];
