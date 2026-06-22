@@ -355,10 +355,6 @@ function Hero() {
   );
 }
 
-function Counter({ value, suffix, label }: { value: number; suffix: string; label: string }) {
-  return _Counter({ value, suffix, label });
-}
-
 function Typewriter({
   text,
   className = "",
@@ -400,7 +396,7 @@ function Typewriter({
   );
 }
 
-function _Counter({ value, suffix, label }: { value: number; suffix: string; label: string }) {
+function Counter({ value, suffix, label }: { value: number; suffix: string; label: string }) {
   const [n, setN] = useState(0);
   useEffect(() => {
     let raf: number;
