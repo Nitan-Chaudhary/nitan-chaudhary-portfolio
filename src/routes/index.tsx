@@ -68,7 +68,7 @@ const SKILL_GROUPS = [
   },
   {
     icon: Brain,
-    title: "Data Science & AI",
+    title: "Data Science",
     skills: [
       { name: "Pandas / NumPy", level: 90 },
       { name: "Scikit-Learn", level: 85 },
@@ -119,7 +119,7 @@ const PROJECTS = [
 ];
 
 const CERTIFICATIONS = [
-  { title: "Data Analytics Master Class", org: "Novitech R&D Pvt. Ltd." },
+  { title: "Diploma In Computer engineering", org: "Dr. B.R. Ambedkar Govt. Polytechnic Ambota" },
   { title: "Data Science Training", org: "Sensation Software Solutions Pvt. Ltd." },
   { title: "Python Training", org: "Skysys Engineering" },
   { title: "Frontend Development Training", org: "Apptechies" },
@@ -130,13 +130,13 @@ const EDUCATION = [
     year: "2023 — 2026",
     title: "Bachelor of Computer Science & Engineering (B.Tech)",
     org: "University Degree",
-    detail: "Foundation in mathematics, statistics, and computer science.",
+    detail: "",
   },
   {
-    year: "2025",
-    title: "Data Analytics Master Class",
-    org: "Novitech R&D Pvt. Ltd.",
-    detail: "Advanced training in analytics workflows, SQL, and BI tools.",
+    year: "2020 — 2023",
+    title: "Diploma In Computer engineering",
+    org: "Dr. B.R. Ambedkar Govt. Polytechnic Ambota",
+    detail: "",
   },
   {
     year: "2024",
