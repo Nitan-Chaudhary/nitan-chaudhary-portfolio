@@ -120,7 +120,7 @@ const PROJECTS = [
 
 const CERTIFICATIONS = [
   { title: "Diploma In Computer engineering", org: "Dr. B.R. Ambedkar Govt. Polytechnic Ambota" },
-  { title: "Data Science Training", org: "Sensation Software Solutions Pvt. Ltd." },
+  { title: "Data Science Internship", org: "Sensation Software Solutions Pvt. Ltd." },
   { title: "Python Training", org: "Skysys Engineering" },
   { title: "Frontend Development Training", org: "Apptechies" },
 ];
@@ -134,8 +134,8 @@ const EDUCATION = [
   },
   {
     year: "2020 — 2023",
-    title: "Diploma In Computer engineering",
-    org: "Dr. B.R. Ambedkar Govt. Polytechnic Ambota, Himachal Pradesh",
+    title: "Diploma in Computer Engineering",
+    org: "Dr. B.R. Ambedkar Government Polytechnic Ambota, Himachal Pradesh",
     detail: "",
   },
 ];
@@ -326,7 +326,7 @@ function Hero() {
               </div>
             </div>
             <div className="absolute -top-2 -left-2 glass rounded-2xl px-3 py-2 text-xs">
-              <Brain className="inline h-3.5 w-3.5 mr-1 text-accent" /> ML / AI
+              <Brain className="inline h-3.5 w-3.5 mr-1 text-accent" /> Data Science
             </div>
           </div>
         </div>
