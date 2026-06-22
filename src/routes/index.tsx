@@ -129,20 +129,14 @@ const EDUCATION = [
   {
     year: "2023 — 2026",
     title: "Bachelor of Computer Science & Engineering (B.Tech)",
-    org: "University Degree",
+    org: "Sant Baba Bhag Singh University, Jalandhar",
     detail: "",
   },
   {
     year: "2020 — 2023",
     title: "Diploma In Computer engineering",
-    org: "Dr. B.R. Ambedkar Govt. Polytechnic Ambota",
+    org: "Dr. B.R. Ambedkar Govt. Polytechnic Ambota, Himachal Pradesh",
     detail: "",
-  },
-  {
-    year: "2024",
-    title: "Python Training",
-    org: "Skysys Engineering",
-    detail: "Core Python, libraries, and applied scripting.",
   },
 ];
 
