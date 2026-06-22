@@ -690,7 +690,7 @@ function Contact() {
               setTimeout(() => setSent(false), 3000);
               (e.target as HTMLFormElement).reset();
             }}
-            className="glass rounded-3xl p-7 card-shadow space-y-4"
+            className="reveal glass rounded-3xl p-7 card-shadow space-y-4"
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <Input placeholder="Your name" required className="bg-secondary/40 border-border" />
