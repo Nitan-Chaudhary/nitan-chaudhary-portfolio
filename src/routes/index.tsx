@@ -706,7 +706,7 @@ function Contact() {
               { icon: Mail, label: "Email", value: "nitan@example.com", href: "mailto:nitan@example.com" },
               { icon: Phone, label: "Phone", value: "+977 98XXXXXXXX", href: "tel:+977" },
               { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/nitan", href: "#" },
-              { icon: Github, label: "GitHub", value: "github.com/nitan", href: "#" },
+              { icon: Github, label: "GitHub", value: "github.com/Nitan-Chaudhary", href: "https://github.com/Nitan-Chaudhary" },
               { icon: MapPin, label: "Location", value: "Available remote / on-site" },
             ].map((c) => (
               <a
