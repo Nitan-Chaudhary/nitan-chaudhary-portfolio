@@ -120,7 +120,6 @@ const PROJECTS = [
 ];
 
 const CERTIFICATIONS = [
-  { title: "Diploma In Computer engineering", org: "Dr. B.R. Ambedkar Govt. Polytechnic Ambota" },
   { title: "Data Science Internship", org: "Sensation Software Solutions Pvt. Ltd." },
   { title: "Python Training", org: "Skysys Engineering" },
   { title: "Frontend Development Training", org: "Apptechies" },
@@ -373,7 +372,7 @@ function Hero() {
 function Typewriter({
   text,
   className = "",
-  speed = 90,
+  speed = 80,
   pause = 1400,
 }: {
   text: string;
@@ -700,8 +699,9 @@ function Resume() {
           <Button
             size="lg"
             className="rounded-full bg-gradient-brand text-primary-foreground hover:opacity-90 glow-shadow"
-          >
+          ><a href={resume} download="Nitan-Chaudhary.pdf">
             <Download className="mr-2 h-4 w-4" /> Download CV
+          </a>
           </Button>
         </div>
       </div>
@@ -718,9 +718,9 @@ function Contact() {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="space-y-4">
             {[
-              { icon: Mail, label: "Email", value: "nitan@example.com", href: "mailto:nitan@example.com" },
-              { icon: Phone, label: "Phone", value: "+977 98XXXXXXXX", href: "tel:+977" },
-              { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/nitan", href: "#" },
+              { icon: Mail, label: "Email", value: "chaudharynitan4@gmail.com", href: "mailto:chaudharynitan4@gmail.com" },
+              { icon: Phone, label: "Phone", value: "9015132492", href: "tel:9015132492" },
+              { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/nitan-chaudhary", href: "https://www.linkedin.com/in/nitan-chaudhary-b2206a271/" },
               { icon: Github, label: "GitHub", value: "github.com/Nitan-Chaudhary", href: "https://github.com/Nitan-Chaudhary" },
               { icon: MapPin, label: "Location", value: "Available remote / on-site" },
             ].map((c) => (
