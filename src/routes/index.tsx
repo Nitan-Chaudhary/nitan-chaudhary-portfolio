@@ -508,10 +508,11 @@ function Projects() {
           ))}
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {list.map((p) => (
+          {list.map((p, i) => (
             <article
               key={p.title}
-              className="group glass rounded-3xl overflow-hidden card-shadow hover:-translate-y-1 transition"
+              className="reveal group glass rounded-3xl overflow-hidden card-shadow hover:-translate-y-1 transition"
+              style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -563,10 +564,11 @@ function Certifications() {
       <div className="mx-auto max-w-6xl px-4">
         <SectionHeader tag="Certifications" title="Continuous learning" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {CERTIFICATIONS.map((c) => (
+          {CERTIFICATIONS.map((c, i) => (
             <div
               key={c.title}
-              className="glass rounded-3xl p-6 card-shadow hover:-translate-y-1 transition"
+              className="reveal glass rounded-3xl p-6 card-shadow hover:-translate-y-1 transition"
+              style={{ transitionDelay: `${i * 80}ms` }}
             >
               <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-brand text-primary-foreground mb-4">
                 <Award className="h-6 w-6" />
@@ -592,9 +594,10 @@ function Education() {
             {EDUCATION.map((e, i) => (
               <div
                 key={e.title}
-                className={`relative md:grid md:grid-cols-2 md:gap-10 ${
+                className={`reveal relative md:grid md:grid-cols-2 md:gap-10 ${
                   i % 2 === 0 ? "" : "md:[direction:rtl]"
                 }`}
+                style={{ transitionDelay: `${i * 120}ms` }}
               >
                 <div
                   className={`pl-12 md:pl-0 ${
