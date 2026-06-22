@@ -766,12 +766,18 @@ function Footer() {
           © {new Date().getFullYear()} Nitan Chaudhary. All rights reserved.
         </div>
         <div className="flex items-center gap-3">
-          {[Github, Linkedin, Mail].map((I, i) => (
+          {[
+            { I: Github, href: "https://github.com/Nitan-Chaudhary", label: "GitHub" },
+            { I: Linkedin, href: "#", label: "LinkedIn" },
+            { I: Mail, href: "mailto:nitan@example.com", label: "Email" },
+          ].map(({ I, href, label }) => (
             <a
-              key={i}
-              href="#"
+              key={label}
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
               className="grid h-9 w-9 place-items-center rounded-full glass hover:bg-gradient-brand hover:text-primary-foreground transition"
-              aria-label="Social link"
+              aria-label={label}
             >
               <I className="h-4 w-4" />
             </a>
