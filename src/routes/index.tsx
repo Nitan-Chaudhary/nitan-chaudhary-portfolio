@@ -382,7 +382,7 @@ function Counter({ value, suffix, label }: { value: number; suffix: string; labe
 
 function SectionHeader({ tag, title, sub }: { tag: string; title: string; sub?: string }) {
   return (
-    <div className="text-center max-w-2xl mx-auto mb-14">
+    <div className="reveal text-center max-w-2xl mx-auto mb-14">
       <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs text-muted-foreground mb-4">
         <span className="h-1.5 w-1.5 rounded-full bg-accent" />
         {tag}
@@ -402,6 +402,7 @@ function About() {
         <SectionHeader tag="About Me" title="Turning data into decisions" />
         <div className="grid md:grid-cols-3 gap-6">
           <div className="glass rounded-3xl p-7 md:col-span-2">
+
             <h3 className="text-xl font-semibold mb-3">Professional Summary</h3>
             <p className="text-muted-foreground leading-relaxed">
               I'm an aspiring Data Scientist with hands-on
