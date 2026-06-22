@@ -73,7 +73,6 @@ const SKILL_GROUPS = [
       { name: "Pandas / NumPy", level: 90 },
       { name: "Scikit-Learn", level: 85 },
       { name: "Machine Learning", level: 82 },
-      { name: "Deep Learning", level: 75 },
     ],
   },
   {
