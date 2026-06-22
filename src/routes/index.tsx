@@ -401,8 +401,7 @@ function About() {
       <div className="mx-auto max-w-6xl px-4">
         <SectionHeader tag="About Me" title="Turning data into decisions" />
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="glass rounded-3xl p-7 md:col-span-2">
-
+          <div className="reveal glass rounded-3xl p-7 md:col-span-2">
             <h3 className="text-xl font-semibold mb-3">Professional Summary</h3>
             <p className="text-muted-foreground leading-relaxed">
               I'm an aspiring Data Scientist with hands-on
@@ -424,8 +423,12 @@ function About() {
               { icon: BarChart3, label: "Analytics & BI" },
               { icon: Code2, label: "Python • SQL" },
               { icon: Globe, label: "Streamlit • Web" },
-            ].map((c) => (
-              <div key={c.label} className="glass rounded-2xl p-4 flex items-center gap-3">
+            ].map((c, i) => (
+              <div
+                key={c.label}
+                className="reveal glass rounded-2xl p-4 flex items-center gap-3"
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
                 <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-brand text-primary-foreground">
                   <c.icon className="h-5 w-5" />
                 </span>
@@ -445,8 +448,12 @@ function Skills() {
       <div className="mx-auto max-w-6xl px-4">
         <SectionHeader tag="Skills" title="Toolbox & expertise" />
         <div className="grid md:grid-cols-2 gap-6">
-          {SKILL_GROUPS.map((g) => (
-            <div key={g.title} className="glass rounded-3xl p-7 card-shadow hover:-translate-y-1 transition">
+          {SKILL_GROUPS.map((g, i) => (
+            <div
+              key={g.title}
+              className="reveal glass rounded-3xl p-7 card-shadow hover:-translate-y-1 transition"
+              style={{ transitionDelay: `${i * 100}ms` }}
+            >
               <div className="flex items-center gap-3 mb-5">
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-brand text-primary-foreground">
                   <g.icon className="h-5 w-5" />
