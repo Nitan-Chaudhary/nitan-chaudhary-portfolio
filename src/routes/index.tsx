@@ -286,7 +286,7 @@ function Hero() {
             Available for opportunities
           </div>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Hi, I'm <span className="text-gradient">Nitan Chaudhary</span>
+            Hi, I'm <Typewriter text="Nitan Chaudhary" className="text-gradient" />
           </h1>
           <p className="mt-4 text-lg md:text-xl text-muted-foreground">
             Data Scientist <span className="text-accent">|</span> Data Analyst
