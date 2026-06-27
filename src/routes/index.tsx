@@ -4,6 +4,7 @@ import {
   Download,
   Mail,
   Github,
+  Code2,
   Linkedin,
   Phone,
   ArrowUp,
@@ -609,7 +610,7 @@ function Projects() {
                 href={p.link2}
                   className="mt-5 inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
                 >
-                  <Github className="h-4 w-4" /> View Project 
+                  <Code2 className="h-4 w-4" /> View Project 
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
               </div>
