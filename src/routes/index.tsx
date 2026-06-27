@@ -105,7 +105,7 @@ const PROJECTS = [
       "Predicts Air Quality Index status using a Random Forest model with an interactive Streamlit dashboard for real-time monitoring.",
     tech: ["Python", "Random Forest", "Streamlit", "Pandas", "Scikit-Learn"],
     features: ["AQI Prediction", "Interactive Dashboard", "Data Visualization"],
-    link: "#",
+    link: "https://nitan-chaudhary-portfolio.vercel.app",
   },
   {
     title: "Employee Salary Analysis",
