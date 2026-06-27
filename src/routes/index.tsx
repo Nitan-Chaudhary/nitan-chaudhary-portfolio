@@ -372,7 +372,7 @@ function Hero() {
 function Typewriter({
   text,
   className = "",
-  speed = 80,
+  speed = 60,
   pause = 1400,
 }: {
   text: string;
@@ -603,6 +603,12 @@ function Projects() {
                 >
                   <Github className="h-4 w-4" /> View on GitHub
                   <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+                <a
+                  href="https://nitan-chaudhary-portfolio.vercel.app"
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
+                >
+                  View Project
                 </a>
               </div>
             </article>
