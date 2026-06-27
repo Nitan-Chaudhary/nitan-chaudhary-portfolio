@@ -602,14 +602,14 @@ function Projects() {
                   href={p.link}
                   className="mt-5 inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
                 >
-                    View on GitHub   
+                  <Github className="h-4 w-4" />  View on GitHub   
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
                 <a
                 href={p.link2}
                   className="mt-5 inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
                 >
-                  <Code2 className="h-4 w-4" /> View Project 
+                   View Project 
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
               </div>
