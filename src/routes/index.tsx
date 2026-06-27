@@ -107,7 +107,7 @@ const PROJECTS = [
     tech: ["Python", "Random Forest", "Streamlit", "Pandas", "Scikit-Learn"],
     features: ["AQI Prediction", "Interactive Dashboard", "Data Visualization"],
     link: "#",
-    link2: "https://aqistatuspredictionsystem.streamlit.app"
+    link2: "https://aqistatuspredictionsystem.streamlit.app",
   },
   {
     title: "Employee Salary Analysis",
@@ -606,6 +606,7 @@ function Projects() {
                   <Github className="h-4 w-4" /> View on GitHub   
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
+                <a
                 href={p.link2}
                   className="mt-5 inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
                 >
