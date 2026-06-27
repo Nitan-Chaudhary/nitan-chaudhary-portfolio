@@ -4,6 +4,7 @@ import {
   Download,
   Mail,
   Github,
+  Streamlit,
   Linkedin,
   Phone,
   ArrowUp,
@@ -105,7 +106,8 @@ const PROJECTS = [
       "Predicts Air Quality Index status using a Random Forest model with an interactive Streamlit dashboard for real-time monitoring.",
     tech: ["Python", "Random Forest", "Streamlit", "Pandas", "Scikit-Learn"],
     features: ["AQI Prediction", "Interactive Dashboard", "Data Visualization"],
-    link: "https://nitan-chaudhary-portfolio.vercel.app",
+    link: "#",
+    link2: "https://aqistatuspredictionsystem.streamlit.app"
   },
   {
     title: "Employee Salary Analysis",
@@ -372,8 +374,8 @@ function Hero() {
 function Typewriter({
   text,
   className = "",
-  speed = 10,
-  pause = 1000,
+  speed = 120,
+  pause = 2000,
 }: {
   text: string;
   className?: string;
@@ -604,11 +606,11 @@ function Projects() {
                   <Github className="h-4 w-4" /> View on GitHub   
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
-                <a
-                  href="https://aqistatuspredictionsystem.streamlit.app"
+                href={p.link2}
                   className="mt-5 inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
                 >
-                    View Project
+                  <Streamlit className="h-4 w-4" /> View Project 
+                  <ExternalLink className="h-3.5 w-3.5" />
                 </a>
               </div>
             </article>
