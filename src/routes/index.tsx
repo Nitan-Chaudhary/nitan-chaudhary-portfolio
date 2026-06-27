@@ -372,8 +372,8 @@ function Hero() {
 function Typewriter({
   text,
   className = "",
-  speed = 60,
-  pause = 1400,
+  speed = 10,
+  pause = 1000,
 }: {
   text: string;
   className?: string;
@@ -601,14 +601,14 @@ function Projects() {
                   href={p.link}
                   className="mt-5 inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
                 >
-                  <Github className="h-4 w-4" /> View on GitHub
+                  <Github className="h-4 w-4" /> View on GitHub   
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
                 <a
-                  href="https://nitan-chaudhary-portfolio.vercel.app"
+                  href="https://aqistatuspredictionsystem.streamlit.app"
                   className="mt-5 inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
                 >
-                  View Project
+                    View Project
                 </a>
               </div>
             </article>
